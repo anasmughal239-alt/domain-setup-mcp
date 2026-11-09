@@ -1,6 +1,8 @@
 # domain-setup-mcp
 
-An MCP server that sets up cold email domains in bulk on Cloudflare: verification TXT, SPF, DKIM, DMARC, MX, custom tracking domains and website forwarding.
+An MCP server for Claude and other MCP clients that sets up cold email domains in bulk on Cloudflare: verification TXT, SPF, DKIM, DMARC, MX, custom tracking domains and website forwarding. Works with Google Workspace, Microsoft 365 and Amazon SES, and with Smartlead and Instantly tracking.
+
+Use it to audit email deliverability DNS, fix SPF records, add DMARC, and roll out sending domains for outbound campaigns without hand-editing DNS.
 
 Agencies set up dozens of domains per client by hand. One wrong SPF edit (a second record, an overwrite, an 11th lookup) or one DKIM key pasted onto the wrong domain silently breaks deliverability. This server plans every change as a reviewable diff, refuses unsafe plans, applies each domain atomically, and can undo any run.
 
@@ -46,7 +48,17 @@ All tools take lists of domains (max 100 per call). One failing domain never sto
 13. **Rate limits handled honestly.** Cloudflare blocks all calls for 5 minutes after 1,200 requests. Short waits are retried; the 5-minute block returns a clear error instead of hanging the agent.
 14. **Input validated before any network call**: domains, emails, URLs, regions, DKIM keys (pasted quotes and line breaks are cleaned), tokens, verification codes.
 
-## Setup
+## Install in Claude Desktop
+
+1. Download [`domain-setup-mcp.mcpb`](https://github.com/anasmughal239-alt/domain-setup-mcp/releases/latest/download/domain-setup-mcp.mcpb) from the latest release.
+2. Double-click it, or go to Settings > Extensions > Advanced settings > Install Extension.
+3. Enter your Cloudflare API token when asked (see the token permissions below).
+
+Claude Desktop supplies its own `uv` to run the extension. Keep Python 3.11 or newer installed: running without it hasn't been tested.
+
+## Setup from source
+
+Requires Python 3.11 or newer.
 
 ```bash
 git clone https://github.com/anasmughal239-alt/domain-setup-mcp.git && cd domain-setup-mcp
