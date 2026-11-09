@@ -12,3 +12,5 @@ dist/
 .env
 .env.*
 .domain-setup-mcp/
+.mcpregistry_*
+mcp-publisher*

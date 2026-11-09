@@ -1,5 +1,7 @@
 # domain-setup-mcp
 
+<!-- mcp-name: io.github.anasmughal239-alt/domain-setup-mcp -->
+
 An MCP server for Claude and other MCP clients that sets up cold email domains in bulk on Cloudflare: verification TXT, SPF, DKIM, DMARC, MX, custom tracking domains and website forwarding. Works with Google Workspace, Microsoft 365 and Amazon SES, and with Smartlead and Instantly tracking.
 
 Use it to audit email deliverability DNS, fix SPF records, add DMARC, and roll out sending domains for outbound campaigns without hand-editing DNS.

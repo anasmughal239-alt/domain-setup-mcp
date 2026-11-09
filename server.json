@@ -1,0 +1,48 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.anasmughal239-alt/domain-setup-mcp",
+  "title": "Domain Setup for Cold Email",
+  "description": "Plan, apply, verify and roll back SPF, DKIM, DMARC and MX for cold email domains on Cloudflare",
+  "repository": {
+    "url": "https://github.com/anasmughal239-alt/domain-setup-mcp",
+    "source": "github"
+  },
+  "version": "0.3.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "domain-setup-mcp",
+      "version": "0.3.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CLOUDFLARE_API_TOKEN",
+          "description": "Cloudflare API token with Zone Read, DNS Edit and Single Redirect Edit, limited to your zones",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    },
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/anasmughal239-alt/domain-setup-mcp/releases/download/v0.3.0/domain-setup-mcp.mcpb",
+      "fileSha256": "5bb7cf96a2d0110e19337da5eedb74b795b144b2e5751bd67340308627860428",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CLOUDFLARE_API_TOKEN",
+          "description": "Cloudflare API token with Zone Read, DNS Edit and Single Redirect Edit, limited to your zones",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
