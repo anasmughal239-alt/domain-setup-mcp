@@ -1,5 +1,8 @@
 # domain-setup-mcp
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/anasmughal239-alt-domain-setup-mcp-cr3q8q?v=62e48756e251d85070511df4670bc4b0)](https://m8ven.ai/mcp/anasmughal239-alt-domain-setup-mcp-cr3q8q?s=readme)
+[![Domain Setup for Cold Email MCP server](https://mcprush.com/badge/domain-setup-for-cold-email-mcp/card.svg)](https://mcprush.com/to/domain-setup-for-cold-email-mcp?ref=badge)
+
 <!-- mcp-name: io.github.anasmughal239-alt/domain-setup-mcp -->
 
 An MCP server for Claude and other MCP clients that sets up cold email domains in bulk on Cloudflare: verification TXT, SPF, DKIM, DMARC, MX, custom tracking domains and website forwarding. Works with Google Workspace, Microsoft 365 and Amazon SES, and with Smartlead and Instantly tracking.
